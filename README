@@ -1,0 +1,7 @@
+Uses an ATTINY85 for glo plug operation, intended primarily for R/c helicopters
+
+Will PWM the supply through a Darlington transistor for 10 seconds after pressing the push button, providing a constant voltage to the gloplug
+
+Should run fine off of 2s lipo
+
+18/12/2011 - Ready for first etch and test
