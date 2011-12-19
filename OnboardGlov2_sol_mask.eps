@@ -1,0 +1,168 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing C:/Documents and Settings/Colin Greatwood/My Documents/eagle/OnboardGlov2/OnboardGlov2.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 128 92
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+0 0 412750 0 0 l
+412750 0 412750 298450 0 l
+412750 298450 0 298450 0 l
+0 298450 0 0 0 l
+260350 76200 17272 p
+260350 101600 17272 17272 0.0 o
+260350 127000 17272 17272 0.0 o
+234950 76200 17272 17272 0.0 o
+234950 101600 17272 17272 0.0 o
+234950 127000 17272 17272 0.0 o
+171450 234950 18796 p
+273050 234950 18796 p
+306705 276225 321945 276225 17272 l
+306705 250825 321945 250825 17272 l
+88900 236982 88900 220218 18796 l
+63500 236982 63500 220218 18796 l
+38100 236982 38100 220218 18796 l
+63500 53340 16510 0 c
+63500 53340 35052 p
+120650 192405 120650 207645 17272 l
+146050 192405 146050 207645 17272 l
+305943 67056 321183 67056 17272 l
+305943 21844 321183 21844 17272 l
+370967 67056 386207 67056 17272 l
+370967 21844 386207 21844 17272 l
+190500 31750 14128 p
+254000 254000 14128 p
+133350 165100 14128 p
+196850 69850 14128 p
+209550 88900 14128 p
+196850 101600 14128 p
+196850 139700 14128 p
+209550 114300 14128 p
+279400 190500 14128 p
+187325 219075 14128 p
